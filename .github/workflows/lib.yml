@@ -1,0 +1,12 @@
+name: rcore like suite
+on:
+  workflow_call:
+    inputs:
+      runner_name: {type: string, required: false}
+      disabled_checks: {type: string, required: false}
+      run_on_label: {type: string, required: false}
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "called with ${{ inputs.run_on_label }}"
